@@ -1,105 +1,259 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Login Page</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-        <style>
-            #para{
-                font-size: 12px
+
+<head>
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #para {
+            font-size: 12px;
+            font: bold 15px/24px "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        #para2 {
+            font-size: 15px;
+            margin-left: 6vw;
+        }
+
+        .button1 {
+            background-color: #17202A;
+            color: white;
+            border-radius: 25px;
+            height: 55px;
+            width: 31vw;
+            font: bold 15px/24px "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        #para1 {
+            font-size: 10px;
+            color: grey;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background-color: whitesmoke;
+        }
+
+        input:hover {
+            box-shadow: rgb(252, 219, 238) 0px 0px 0px 3px;
+        }
+
+        input:focus {
+            border: 2px solid #f699cd;
+        }
+
+        h5 {
+            font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font: bold 24px/29px "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        b {
+            color: black;
+        }
+
+        #bigField {
+            border-radius: 10px;
+            width: 100%;
+            height: 50px;
+            /* margin-left: 1vw; */
+        }
+
+        #smallField {
+            border-radius: 10px;
+            width: 180px;
+            height: 50px;
+        }
+
+        #checkBox {
+            font: 14px Mona Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+            margin-left: -2vw;
+        }
+
+        form {
+            background-color: whitesmoke;
+        }
+
+        #main-div {
+            position: absolute;
+        }
+
+        video {
+            height: 100vh;
+        }
+
+        #div1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        input::placeholder {
+            font: 0.80rem/3 sans-serif;
+        }
+
+        #div2 {
+            margin-left: 10vw;
+        }
+
+        @media (max-width: 1200px) {
+            #para2 {
+                margin-left: 0;
+                text-align: center;
             }
-            .button1{
-                background-color: #17202A ; 
-                color: white;
-                border-radius: 20px; 
-                height: 40px;
-                width: 90%; 
-            }  
-            #para1{
-                font-size: 9px;
-            } 
-            .auth-sidebar .auth-sidebar-video {
-                display: none;
-                /* width: 500px; */
-                -o-object-fit: cover;
-                object-fit: cover;
-                height: 100%;
+
+            #para1 {
+                margin-left: 0;
+                text-align: center;
             }
-            input{
-                border-color: #F2F3F4;
-                border: 2px solid #CCD1D1;
+
+            .button1 {
+                width: 100%;
             }
-            input:hover{
-                /* border-color: #ffdbe9; */
-                /* box-shadow: rgb(243, 193, 193) 0px 5px 15px 0px; */
-                box-shadow: rgb(252, 219, 238) 0px 0px 0px 3px;
+
+            #div1 {
+                height: 0px;
+                width: 0px;
             }
-            input:focus{
-                border-color: ;
+
+            #bigField {
+                width: 100%;
+                margin-left: 0;
             }
-            /* @media only screen and(min width:802px) {
-                #para{
-                font-size: 12px
+
+            #smallField {
+                width: 100%;
+                margin-bottom: 10px;
             }
-            .button1{
-                background-color: #17202A ; 
-                color: white;
-                border-radius: 20px; 
-                height: 40px;
-                width: 45%; 
-            }  
-            #para1{
-                font-size: 9px;
-            }   
-            } */
-        </style>
-    </head>
-        <body>
-            <form action="" style="width: 800px; background-color: whitesmoke;">
-                <div class="row">
-                    <div class="col-md-6">
-                        <video style="width: 100%;height: 100%;" playsinline="" class="auth-sidebar-video" autoplay="" loop="" muted="" src="https://cdn.dribbble.com/uploads/48292/original/30fd1f7b63806eff4db0d4276eb1ac45.mp4?1689187515">
-                        </video> </div>
-                    <div class="col-md-6 mt-5">
-                        <h5>Sign up to Dribble</h5><br/>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p id="para"><b>Name</b></p>
-                                <input type="text" style="border-radius: 10px; width: 150px;height: 40px;" />
-                            </div>
-                            <div class="col-md-6">
-                                <p id="para"><b>Username</b></p>
-                                <input type="text-field" style="border-radius: 10px; width: 150px;height: 40px;" />
-                            </div>
-                        </div><br/>
-                        <div class="row">
-                            <p id="para"><b>Email</b></p>
-                            <input type="text-field" style="border-radius: 10px;width: 370px;height: 40px;" />
-                        </div><br/>
-                        <div class="row">
-                            <p id="para"><b>Password</b></p>
-                            <input type="text-field" style="border-radius: 10px;width: 370px;height: 40px;" placeholder="6+ characters"/>
-                        </div><br/>
-                        <div class="row">
-                            <div class="col-md-1">
-                                <input type="checkbox" />
-                            </div>
-                            <div class="col-md-11">
-                                <p id="para">I agree with Dribble's <u>Terms of Service</u>,<u> Privacy Policy </u> and default<u> Notification Settings</u></p>
-                            </div>
+        }
+
+        @media (max-width: 993px) {
+            #para2 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            #para1 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .button1 {
+                width: 100%;
+            }
+
+            #div1 {
+                height: 0px;
+                width: 0px;
+            }
+
+            #bigField {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            #smallField {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 612px) {
+            #para2 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            #para1 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .button1 {
+                width: 100%;
+            }
+
+            #div1 {
+                height: 0px;
+                width: 0px;
+            }
+
+            #bigField {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            #smallField {
+                width: 100%;
+                margin-bottom: 0.8vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-div" class="container">
+        <div class="row">
+            <div id="div1" class="col-md-4">
+                <video playsinline="" autoplay="" loop="" muted=""
+                    src="https://cdn.dribbble.com/uploads/48292/original/30fd1f7b63806eff4db0d4276eb1ac45.mp4?1689187515">
+                </video>
+            </div>
+            <div id="div2" class="col-md-6 mt-5">
+                <h5>Sign up to Dribble</h5><br />
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p id="para"><b>Name</b></p>
+                            <input class="w-100" type="text" id="smallField" />
                         </div>
-                        <div class="row">
-                            <button class="button1" >Create Account</button>
-                        </div> <br/>
-                        <div class="row">
-                            <center><p id="para">Already have an account? <u>sign In</u></p></center>
-                        </div>
-                        <div class="row">
-                            <p id="para1">This site is protected by reCAPTCHA and the Google <br/>
-                            <b>Privacy Policy</b> and <b>Terms of Service</b> apply</p>
+                        <div class="col-md-6">
+                            <p id="para"><b>Username</b></p>
+                            <input class="w-100" type="text-field" id="smallField" />
                         </div>
                     </div>
+
+                    <div class="mt-2">
+                        <p id="para"><b>Email</b></p>
+                        <input type="text-field" id="bigField" />
+                    </div><br />
+
+                    <div>
+                        <p id="para"><b>Password</b></p>
+                        <input type="password" id="bigField" placeholder="6+ characters" />
+                    </div><br />
+
+                    <div>
+                        <span>
+                            <input id="box" class="p-3" type="checkbox" />
+                        </span>
+                        <span>
+                            I agree with Dribble's <u>Terms of Service</u>,<u> Privacy Policy </u> and
+                            default<u> Notification Settings.</u>
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <button class="button1">Create Account</button>
+                    </div> <br />
+
+                    <div class="row">
+                        <p id="para2">Already have an account? <b><u>Sign In</u></b></p>
+                    </div>
+
+                    <div class="row">
+                        <p id="para1">This site is protected by reCAPTCHA and the Google <br />
+                            <b>Privacy Policy</b> and <b>Terms of Service</b> apply.
+                        </p>
+                    </div>
+
                 </div>
-            </form>
-        </body>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
